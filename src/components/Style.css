@@ -1,0 +1,33 @@
+.head{
+    height: 60px;
+    width: 100vw;
+    background-color: rgb(207, 178, 180);
+    position: relative;
+    color: rgb(90, 27, 27);
+    display: flex;
+    position: sticky;
+    
+    align-items: center;
+    
+  }
+  .navul{
+    position: absolute;
+    padding-left: 40rem;
+    position: sticky;
+  }
+  .navli{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 50px;
+    
+  }
+  .navli:hover{
+    transform: scale(1.2);
+    font-weight: bold;
+  }
+  
+  span{
+    color: rgb(90, 27, 27);
+    margin-left: 50px;
+  }
+  
