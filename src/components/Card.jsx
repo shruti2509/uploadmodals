@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 
 function Card() {
   const totalClick = (click) =>
@@ -138,6 +138,38 @@ function Card() {
   }
   return (
 <>
+{/* header */}
+
+<div className="head">
+        <span ><b>Brand</b></span>
+        <input type="seach" placeholder="type here to search" style={{marginLeft: "10px"}}/>
+        <nav>
+            <ul className="navul">
+                <li className="navli">wishlist</li>
+                <li className="navli">cart</li>
+                <li className="navli">Account</li>
+                <li className="navli">Help & Support</li>
+            </ul>
+        </nav>
+    </div>
+
+    {/* navbar */}
+
+    <div className="header">
+<nav className="headnav">
+    <ul className="headul">
+        <li className="headli">All</li>
+        <li className="headli">Men</li>
+        <li className="headli">Women</li>
+        <li className="headli">Beauty</li>
+        <li className="headli">Watch</li>
+        <li className="headli">Accessorie</li>
+    </ul>
+</nav>
+</div>
+
+
+
 <div style={ { display: "flex", marginLeft: "50px", justifyContent: 'space-between', marginRight: '50px' }}> 
     {/* <!-- first card --> */}
   <div  style={{ marginTop: '50px', display: 'flex', justifyContent: 'center', border: '5px', borderColor: 'black'}}>
@@ -166,7 +198,8 @@ function Card() {
         </p>
       </div>
       <div style={{display: 'flex'}}>
-      <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a>
+      {/* <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a> */}
+      <Link to="/Card1" className='btn btn-primary'>Add to Cart</Link> 
       <a href="popupiframe.html" className="btn btn-primary" target="webcam" style={{marginLeft: '100px'}}>try it on </a>
     </div>
     </div>
@@ -195,11 +228,13 @@ function Card() {
       <br/>
       <div className="card-text" style={{backgroundColor: 'rgb(246, 240, 240)', borderRadius: '20px 0px'}}>
         <p style={{paddingTop: '20px', marginTop: '5px', paddingLeft: '20px'}}><strong>About</strong>
-          <p style={{paddingLeft: '20px'}} >An alluring halo of diamonds embrace and accentuate the center gem of this brilliant antique-style ring. Diamond accents on the band add a truly dazzling effect.</p>
+          <p style={{paddingLeft: '20px'}} > <span>An alluring halo of diamonds embrace and accentuate the center gem of this brilliant antique-style ring. Diamond accents on the band add a truly dazzling effect.</span></p>
         </p>
       </div>
       <div style={{display: 'flex'}}>
-      <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a>
+      {/* <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a> */}
+
+      <Link to="/Card2" className='btn btn-primary'>Add to Cart</Link> 
       <a href="popupiframe.html" className="btn btn-primary" target="webcam" style={{marginLeft: '100px'}}>try it on </a>
     </div>
     </div>
@@ -214,7 +249,7 @@ function Card() {
   </div>
     <div className="card-body">
       <h5 className="card-title">Elite Gold Ring</h5>
-      <p className="fw-light">18KT Yellow Gold</p>
+      <p className="fw-light"><span>18KT Yellow Gold</span></p>
       <div style={{display: 'flex', alignItems: 'center',alignContent: 'center', flexDirection: 'left'}}>
         <div style={{width: '300px', display: 'flex'}}>
           <div style={{display:'flex'}}>
@@ -232,7 +267,8 @@ function Card() {
         </p>
       </div>
       <div style={{display: 'flex'}}>
-      <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a>
+      {/* <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a> */}
+      <Link to="/Card3" className='btn btn-primary'>Add to Cart</Link> 
       <a href="popupiframe.html" className="btn btn-primary" target="webcam" style={{marginLeft: '100px'}}>try it on </a>
     </div>
     </div>
@@ -266,7 +302,8 @@ function Card() {
         </p>
       </div>
       <div style={{display: 'flex'}}>
-      <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a>
+      {/* <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a> */}
+      <Link to="/Card4" className='btn btn-primary'>Add to Cart</Link> 
       <a href="popupiframe.html" className="btn btn-primary" target="webcam" style={{marginLeft: '100px'}}>try it on </a>
     </div>
     </div>
@@ -303,7 +340,8 @@ function Card() {
         </p>
       </div>
       <div style={{display: 'flex'}}>
-      <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a>
+      {/* <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a> */}
+      <Link to="/Card5" className='btn btn-primary'>Add to Cart</Link> 
       <a href="popupiframe.html" className="btn btn-primary" target="webcam" style={{marginLeft: '100px'}}>try it on </a>
     </div>
     </div>
@@ -336,7 +374,8 @@ function Card() {
         </p>
       </div>
       <div style={{display: 'flex'}}>
-      <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a>
+      {/* <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a> */}
+      <Link to="/Card6" className='btn btn-primary'>Add to Cart</Link> 
       <a href="popupiframe.html" className="btn btn-primary" target="webcam" style={{marginLeft: '100px'}}>try it on </a>
     </div>
     </div>
@@ -369,7 +408,8 @@ function Card() {
         </p>
       </div>
       <div style={{display: 'flex'}}>
-      <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a>
+      {/* <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a> */}
+      <Link to="/Card7" className='btn btn-primary'>Add to Cart</Link> 
       <a href="popupiframe.html" className="btn btn-primary" target="webcam" style={{marginLeft: '100px'}}>try it on </a>
     </div>
     </div>
@@ -403,7 +443,8 @@ function Card() {
         </p>
       </div>
       <div style={{display: 'flex'}}>
-      <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a>
+      {/* <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a> */}
+      <Link to="/Card8" className='btn btn-primary'>Add to Cart</Link> 
       <a href="popupiframe.html" className="btn btn-primary" target="webcam" style={{marginLeft: '100px'}}>try it on </a>
     </div>
     </div>
@@ -440,7 +481,8 @@ function Card() {
         </p>
       </div>
       <div style={{display: 'flex'}}>
-      <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a>
+      {/* <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a> */}
+      <Link to="/Card9" className='btn btn-primary'>Add to Cart</Link> 
       <a href="popupiframe.html" className="btn btn-primary" target="webcam" style={{marginLeft: '100px'}}>try it on </a>
     </div>
     </div>
