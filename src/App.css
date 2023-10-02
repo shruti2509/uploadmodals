@@ -1,3 +1,6 @@
+body{
+  background-color: #dcd2dd;
+}
 .head{
   height: 60px;
   width: 100vw;
@@ -12,7 +15,7 @@
 }
 .navul{
   position: absolute;
-  padding-left: 40rem;
+  padding-left: 50rem;
   position: sticky;
 }
 .navli{
@@ -71,9 +74,12 @@ span{
   align-items: center;
   display: flex;
   width: 20rem;
-  box-shadow: 5px 10px grey;
+  box-shadow: 5px 10px rgb(186, 185, 185);
   padding: 20px;
 }
+ /* .card:hover{
+transform: scale(1.1);
+} */
 .btn:hover{
   transform:scale(1.1) ;
 }

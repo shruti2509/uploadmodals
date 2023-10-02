@@ -1,6 +1,10 @@
-import React from 'react'
+import React  from 'react'
+import ReactModal from 'react-modal';
+import { useState } from 'react';
+import ring1 from './renders/ring1.png'
 
 function Card1() {
+  const [isOpen, setIsOpen] = useState(false);
     const totalClick = (click) =>
     {
       const totalClicks = document.getElementById('totalClicks');
@@ -12,12 +16,29 @@ function Card1() {
         totalClicks.innerText = 0;
       }  
     }
+
+    // const openpop =()=>{
+    //   // const button = document.getElementById("popup-button");
+    //   // const overlay = document.getElementById("overlay");
+    //   const popup = document.getElementById("popup");
+    //   // overlay.style.display = "block";
+    //   popup.style.display = "block";
+    //   // overlay.style.display = "none";
+    //   //       popup.style.display = "none";
+    // }
+
+    const closeWin =()=>{
+      var someIframe = window.parent.document.getElementById('popup');
+      someIframe.parentNode.removeChild(someIframe);
+      setIsOpen(false)
+    }
+
   return (
 <>
 <div  style={{ marginTop: '50px', display: 'flex', justifyContent: 'center', border: '5px', borderColor: 'black'}}>
-    <div className="card">
+    <div className="card" style={{width: '100rem', height: '44rem', marginTop: '-48px'}}>
     <div style={{paddingLeft: '50px', paddingRight: '50px'}}>
-    <img src="./Jewellery/renders/ring1.png" className="card-img-top" height="200px" width="150px" alt="ring"/>
+    <img src={ring1} className="card-img-top" height="200px" width="150px" alt="ring"/>
   </div>
     <div className="card-body">
       <h5 className="card-title">Elite Gold Ring</h5>
@@ -27,7 +48,7 @@ function Card1() {
           <div style={{display:'flex'}}>
           <button className="button" onClick={()=> totalClick(1)} style={{borderRadius:'5px', height:'28px'}}><p className="plus">+</p></button>
           <span id="totalClicks" style={{marginLeft: '2px', marginRight: '2px'}}>0</span>
-           <button className="button" onClick={()=> totalClick(-1)}  style={{borderRadius:'5px', height:'28px'}}><p className="minus">-</p></button>
+           <button className="button" onClick={()=> totalClick(-1)}  style={{borderRadius:'5px', height:'28px', width:'26px'}}><p className="minus">-</p></button>
      
        </div>
       <h5 style={{textAlign: 'right', marginLeft: '184px'}}>$7,349</h5>
@@ -41,13 +62,25 @@ function Card1() {
       </div>
       <div style={{display: 'flex'}}>
       <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a>
-      <a href="popupiframe.html" className="btn btn-primary" target="webcam" style={{marginLeft: '100px'}}>try it on </a>
+      <button  id='popup-button' className="btn btn-primary" target="webcam" style={{marginLeft: '100px', width:'105px'}} onClick={() => setIsOpen(true)} >try it on </button>
+    {/* <div id='overlay' onClick={()=> notvisible()}></div> */}
     </div>
     </div>
   </div>
 </div>
 
 
+
+
+<ReactModal id='popup'
+        style={{width:'100px', marginLeft: '734px', height:'100px'}}
+        isOpen={isOpen}
+        contentLabel="Example Modal"
+        onRequestClose={() => setIsOpen(false)}
+      >
+        <button id="close-but" onClick={()=> closeWin()} style={{borderRadius: '5px', backgroundColor: 'white', color: 'black', float: 'right', borderColor: 'white'}}>x</button>
+        <h4>webcam</h4>
+        </ReactModal>
 </>
   )
 }

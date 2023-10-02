@@ -1,6 +1,11 @@
 import React from 'react'
+import { useState } from 'react';
+import ReactModal from 'react-modal';
+import ring3 from './renders/ring.png'
 
 function Card3() {
+  const [isOpen, setIsOpen] = useState(false);
+
     const totalClick13 = (click) =>
     {
       const totalClicks = document.getElementById('totalClicks13');
@@ -13,12 +18,21 @@ function Card3() {
       }  
     }
 
+    // close
+
+    const closeWin =()=>{
+      var someIframe = window.parent.document.getElementById('popup');
+      someIframe.parentNode.removeChild(someIframe);
+      setIsOpen(false)
+    }
+
+
   return (
     <>
     <div  style={{ marginTop: '50px', display: 'flex', justifyContent: 'center', border: '5px', borderColor: 'black'}}>
-    <div className="card">
+    <div className="card" style={{width: '100rem', height: '44rem', marginTop: '-48px'}}>
     <div style={{paddingLeft: '50px', paddingRight: '50px'}}>
-    <img src="./Jewellery/renders/ring1.png" className="card-img-top" height="200px" width="150px" alt="ring"/>
+    <img src={ring3} className="card-img-top" height="200px" width="150px" alt="ring"/>
   </div>
     <div className="card-body">
       <h5 className="card-title">Elite Gold Ring</h5>
@@ -28,7 +42,7 @@ function Card3() {
           <div style={{display:'flex'}}>
           <button className="button" onClick={()=> totalClick13(1)} style={{borderRadius:'5px', height:'28px'}}><p className="plus">+</p></button>
           <span id="totalClicks13" style={{marginLeft: '2px', marginRight: '2px'}}>0</span>
-           <button className="button" onClick={()=> totalClick13(-1)}  style={{borderRadius:'5px', height:'28px'}}><p className="minus">-</p></button>
+           <button className="button" onClick={()=> totalClick13(-1)}  style={{borderRadius:'5px', height:'28px',width:'26px'}}><p className="minus">-</p></button>
        </div>
       <h5 style={{textAlign: 'right', marginLeft: '184px'}}>$7,349</h5>
   </div>
@@ -40,12 +54,22 @@ function Card3() {
         </p>
       </div>
       <div style={{display: 'flex'}}>
-      <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a>
-      <a href="popupiframe.html" className="btn btn-primary" target="webcam" style={{marginLeft: '100px'}}>try it on </a>
+      <button className="btn btn-primary">Add to cart</button>
+      <button id='popup-button' className="btn btn-primary"  style={{marginLeft: '100px', width:'105px'}}  onClick={() => setIsOpen(true)}>try it on </button>
     </div>
     </div>
   </div>
 </div>
+
+<ReactModal
+        style={{width:'701px', marginLeft: '734px'}}
+        isOpen={isOpen}
+        contentLabel="Example Modal"
+        onRequestClose={() => setIsOpen(false)}
+      >
+        <button id="close-but" onClick={()=> closeWin()} style={{borderRadius: '5px', backgroundColor: 'white', color: 'black', float: 'right', borderColor: 'white'}}>x</button>
+        <h4>webcam</h4>
+        </ReactModal>
     </>
   )
 }
