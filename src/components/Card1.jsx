@@ -61,7 +61,7 @@ function Card1() {
         </p>
       </div>
       <div style={{display: 'flex'}}>
-      <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a>
+      <button  className="btn btn-primary">Add to cart</button>
       <button  id='popup-button' className="btn btn-primary" target="webcam" style={{marginLeft: '100px', width:'105px'}} onClick={() => setIsOpen(true)} >try it on </button>
     {/* <div id='overlay' onClick={()=> notvisible()}></div> */}
     </div>
@@ -72,8 +72,8 @@ function Card1() {
 
 
 
-<ReactModal id='popup'
-        style={{width:'100px', marginLeft: '734px', height:'100px'}}
+<ReactModal id='popup' 
+        style={{ marginLeft: '734px', height:'100px'}}
         isOpen={isOpen}
         contentLabel="Example Modal"
         onRequestClose={() => setIsOpen(false)}
