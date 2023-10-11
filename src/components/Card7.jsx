@@ -2,6 +2,7 @@ import React from 'react'
 import ReactModal from 'react-modal';
 import { useState } from 'react';
 import necklaces from './renders/Necklace_S_Gold.png'
+import { Link } from 'react-router-dom';
 
 function Card7() {
   const [isOpen, setIsOpen] = useState(false);

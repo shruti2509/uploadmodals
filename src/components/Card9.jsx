@@ -2,7 +2,7 @@ import React from 'react'
 import ReactModal from 'react-modal';
 import { useState } from 'react';
 import necklacexl from './renders/Necklace_XL_Gold.png'
-
+import { Link } from 'react-router-dom';
 function Card9() {
   const [isOpen, setIsOpen] = useState(false);
     const totalClick31 = (click) =>

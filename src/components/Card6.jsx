@@ -2,6 +2,7 @@ import React from 'react'
 import ReactModal from 'react-modal';
 import { useState } from 'react';
 import necklacesl from './renders/Necklace_sL_Gold.png'
+import { Link } from 'react-router-dom';
 
 
 function Card6() {

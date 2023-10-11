@@ -6,13 +6,14 @@ import Card from "./components/Card"
 import Card1 from './components/Card1';
 // import WebCam from './components/WebCam';
 import Card2 from './components/Card2';
-import Card3 from './components/Card2';
-import Card4 from './components/Card2';
-import Card5 from './components/Card2';
-import Card6 from './components/Card2';
-import Card7 from './components/Card2';
-import Card8 from './components/Card2';
-import Card9 from './components/Card2';
+import Card3 from './components/Card3';
+import Card4 from './components/Card4';
+import Card5 from './components/Card5';
+import Card6 from './components/Card6';
+import Card7 from './components/Card7';
+import Card8 from './components/Card8';
+import Card9 from './components/Card9';
+// import index from '../glassesVTO/index.html'
 function App() {
   return (
     <>

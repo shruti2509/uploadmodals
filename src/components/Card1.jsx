@@ -2,6 +2,11 @@ import React  from 'react'
 import ReactModal from 'react-modal';
 import { useState } from 'react';
 import ring1 from './renders/ring1.png'
+import Frame from 'react-frame-component';
+// import Card2 from './Card2';
+import combine from '../glassesVTO/combine';
+// import main from '../glassesVTO/main'
+// import Card2 from './Card2';
 
 function Card1() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,16 +22,7 @@ function Card1() {
       }  
     }
 
-    // const openpop =()=>{
-    //   // const button = document.getElementById("popup-button");
-    //   // const overlay = document.getElementById("overlay");
-    //   const popup = document.getElementById("popup");
-    //   // overlay.style.display = "block";
-    //   popup.style.display = "block";
-    //   // overlay.style.display = "none";
-    //   //       popup.style.display = "none";
-    // }
-
+    
     const closeWin =()=>{
       var someIframe = window.parent.document.getElementById('popup');
       someIframe.parentNode.removeChild(someIframe);
@@ -80,6 +76,11 @@ function Card1() {
       >
         <button id="close-but" onClick={()=> closeWin()} style={{borderRadius: '5px', backgroundColor: 'white', color: 'black', float: 'right', borderColor: 'white'}}>x</button>
         <h4>webcam</h4>
+        <Frame>
+          <combine/>
+          {/* <Card2/> */}
+          {/* <main/> */}
+          </Frame>
         </ReactModal>
 </>
   )

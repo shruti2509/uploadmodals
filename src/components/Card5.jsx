@@ -2,6 +2,7 @@ import React from 'react'
 import ReactModal from 'react-modal';
 import { useState } from 'react';
 import earing2 from './renders/earring2.png'
+import { Link } from 'react-router-dom';
 
 
 function Card5() {

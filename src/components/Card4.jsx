@@ -2,6 +2,7 @@ import React from 'react'
 import ReactModal from 'react-modal';
 import { useState } from 'react';
 import earing1 from './renders/earring1.png'
+import { Link } from 'react-router-dom';
 
 function Card4() {
   const [isOpen, setIsOpen] = useState(false);
