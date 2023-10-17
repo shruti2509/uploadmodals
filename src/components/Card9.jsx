@@ -53,7 +53,8 @@ function Card9() {
       <div style={{display: 'flex'}}>
       {/* <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a> */}
       <Link to="/Card9" className='btn btn-primary'>Add to Cart</Link> 
-      <a href="popupiframe.html" className="btn btn-primary" target="webcam" style={{marginLeft: '100px', width:'105px'}}>try it on </a>
+      <Link to='/Demo'  id='popup-button' className="btn btn-primary" target="webcam" style={{marginLeft: '100px', width:'105px'}} >try it on </Link>
+      {/* <a href="popupiframe.html" className="btn btn-primary" target="webcam" style={{marginLeft: '100px', width:'105px'}}>try it on </a> */}
     </div>
     </div>
   </div>

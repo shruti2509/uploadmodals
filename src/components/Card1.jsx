@@ -3,8 +3,9 @@ import ReactModal from 'react-modal';
 import { useState } from 'react';
 import ring1 from './renders/ring1.png'
 import Frame from 'react-frame-component';
+import { Link } from 'react-router-dom';
 // import Card2 from './Card2';
-import combine from '../glassesVTO/combine';
+// import combine from '../glassesVTO/combine';
 // import main from '../glassesVTO/main'
 // import Card2 from './Card2';
 
@@ -58,8 +59,8 @@ function Card1() {
       </div>
       <div style={{display: 'flex'}}>
       <button  className="btn btn-primary">Add to cart</button>
-      <button  id='popup-button' className="btn btn-primary" target="webcam" style={{marginLeft: '100px', width:'105px'}} onClick={() => setIsOpen(true)} >try it on </button>
-    {/* <div id='overlay' onClick={()=> notvisible()}></div> */}
+      {/* <button  id='popup-button' className="btn btn-primary" target="webcam" style={{marginLeft: '100px', width:'105px'}} onClick={() => setIsOpen(true)} >try it on </button> */}
+      <Link to='/Demo'  id='popup-button' className="btn btn-primary" target="webcam" style={{marginLeft: '100px', width:'105px'}} >try it on </Link>
     </div>
     </div>
   </div>
@@ -77,9 +78,7 @@ function Card1() {
         <button id="close-but" onClick={()=> closeWin()} style={{borderRadius: '5px', backgroundColor: 'white', color: 'black', float: 'right', borderColor: 'white'}}>x</button>
         <h4>webcam</h4>
         <Frame>
-          <combine/>
-          {/* <Card2/> */}
-          {/* <main/> */}
+         
           </Frame>
         </ReactModal>
 </>

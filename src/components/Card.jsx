@@ -209,7 +209,7 @@ function Card() {
       </div>
       <div style={{display: 'flex'}}>
       {/* <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a> */}
-      <Link to="/Card1" className='btn btn-primary'>Add to Cart</Link> 
+      <Link to="/Demo" className='btn btn-primary'>Add to Cart</Link> 
       <Link to="/Card1" className="btn btn-primary" style={{marginLeft: '79px', width:'105px'}}>try it on </Link>
     </div>
     </div>

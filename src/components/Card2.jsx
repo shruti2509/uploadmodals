@@ -2,6 +2,7 @@ import React from 'react';
 import ReactModal from 'react-modal';
 import { useState } from 'react';
 import ring2 from './renders/ring2.png'
+import { Link } from 'react-router-dom';
 
 function Card2() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +55,8 @@ function Card2() {
       </div>
       <div style={{display: 'flex'}}>
       <a href="./popupiframe.html" className="btn btn-primary">Add to cart</a>
-      <button  id='popup-button' className="btn btn-primary" target="webcam" style={{marginLeft: '100px', width:'105px'}} onClick={() => setIsOpen(true)} >try it on </button>
+      {/* <button  id='popup-button' className="btn btn-primary" target="webcam" style={{marginLeft: '100px', width:'105px'}} onClick={() => setIsOpen(true)} >try it on </button> */}
+      <Link to='/Demo'  id='popup-button' className="btn btn-primary" target="webcam" style={{marginLeft: '100px', width:'105px'}} >try it on </Link>
     </div>
     </div>
   </div>

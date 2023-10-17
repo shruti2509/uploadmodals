@@ -13,6 +13,8 @@ import Card6 from './components/Card6';
 import Card7 from './components/Card7';
 import Card8 from './components/Card8';
 import Card9 from './components/Card9';
+import AppCanvas from './components/tryon/AppCanvas';
+
 // import index from '../glassesVTO/index.html'
 function App() {
   return (
@@ -30,6 +32,7 @@ function App() {
       <Route path='/Card7' element={<Card7/>}></Route>
       <Route path='/Card8' element={<Card8/>}></Route>
       <Route path='/Card9' element={<Card9/>}></Route>
+      <Route path='/Demo' element={<AppCanvas/>}></Route>
       <Route/>
     </Routes>
     </BrowserRouter>
